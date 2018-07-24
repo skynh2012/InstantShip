@@ -23,7 +23,7 @@ public class PlashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 setLanguage();
-                AppUtils.startActivityLTR(PlashActivity.this, LoginActivity.class);
+                AppUtils.startActivityLTR(PlashActivity.this, TutorialActivity.class);
                 finish();
             }
         }, 2000);

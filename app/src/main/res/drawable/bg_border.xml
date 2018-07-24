@@ -4,17 +4,15 @@
         <shape>
             <corners android:radius="@dimen/dimen_8x" />
             <stroke android:width="0.5dp" android:color="@color/black" />
-            <solid android:color="@color/light_grey" />
+            <solid android:color="@color/grey" />
         </shape>
     </item>
 
     <item>
-
         <shape>
             <corners android:radius="@dimen/dimen_8x" />
             <stroke android:width="0.5dp" android:color="@color/black" />
             <solid android:color="@color/white" />
         </shape>
-
     </item>
 </selector>

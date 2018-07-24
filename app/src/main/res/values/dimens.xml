@@ -31,5 +31,5 @@
     <dimen name="height_content_comment">130dp</dimen>
     <dimen name="height_item_setting">40dp</dimen>
 
-    <dimen name="height_button_login">36dp</dimen>
+    <dimen name="height_button_login">48dp</dimen>
 </resources>

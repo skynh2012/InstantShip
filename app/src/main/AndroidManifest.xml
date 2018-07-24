@@ -21,12 +21,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name=".view.activity.TutorialActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".view.activity.RegisterActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.RegisterActivity" />
+        <activity android:name=".view.activity.LoginActivity"></activity>
     </application>
 
 </manifest>

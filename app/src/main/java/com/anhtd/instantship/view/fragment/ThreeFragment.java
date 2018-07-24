@@ -26,5 +26,10 @@ public class ThreeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_three, container, false);
     }
 
-
+    public static ThreeFragment newInstance() {
+        ThreeFragment fragment = new ThreeFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
 }

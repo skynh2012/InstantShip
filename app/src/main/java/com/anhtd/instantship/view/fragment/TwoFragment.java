@@ -23,4 +23,11 @@ public class TwoFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_three, container, false);
     }
+
+    public static TwoFragment newInstance() {
+        TwoFragment fragment = new TwoFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
 }
