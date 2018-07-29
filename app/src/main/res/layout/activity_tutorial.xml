@@ -95,6 +95,7 @@
                     android:layout_marginRight="@dimen/dimen_6x"
                     android:layout_marginTop="@dimen/dimen_1x"
                     android:background="@drawable/bg_border"
+                    android:onClick="@{handler::onRegisterPressed}"
                     android:text="@string/register"
                     android:textAllCaps="false"
                     android:textColor="@color/green"
@@ -113,17 +114,7 @@
             </RelativeLayout>
 
 
-
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ln_sheet_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
-            android:orientation="vertical">
-
-            <include layout="@layout/layout_bottom_sheet_sign" />
-        </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 </layout>

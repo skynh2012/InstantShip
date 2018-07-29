@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 import com.anhtd.instantship.R;
 import com.anhtd.instantship.databinding.ActivityTutorialBinding;
+import com.anhtd.instantship.utils.AppUtils;
 import com.anhtd.instantship.utils.ScreenUtils;
 import com.anhtd.instantship.view.adapter.BottomSheetFragment;
 import com.anhtd.instantship.view.adapter.ViewPagerAdapter;
@@ -28,8 +29,6 @@ public class TutorialActivity extends AppCompatActivity {
     private ActivityTutorialBinding binding;
     private LoginViewModel viewModel;
     private LoginHandler handler;
-    private BottomSheetBehavior sheetBehavior;
-    private LinearLayout btsLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,28 +36,9 @@ public class TutorialActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         initDataBingding();
-        //initSheet();
+
     }
 
-    private void initSheet() {
-        // btsLogin = binding.getRoot().findViewById(R.id.sheet_dialog);
-
-        sheetBehavior = BottomSheetBehavior.from(binding.lnSheetBottom);
-        sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View bottomSheet, int newState) {
-
-            }
-
-            @Override
-            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-
-            }
-        });
-        ScreenUtils screenUtils = new ScreenUtils(this);
-        sheetBehavior.setPeekHeight(screenUtils.getHeight());
-        sheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
-    }
 
     private void initDataBingding() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_tutorial);
@@ -88,11 +68,11 @@ public class TutorialActivity extends AppCompatActivity {
 
     public class LoginHandler {
         public void onLoginPressed(View view) {
-            BottomSheetFragment sheetFragment = new BottomSheetFragment();
-            Bundle arg = new Bundle();
-            sheetFragment.setArguments(arg);
-            sheetFragment.show(getSupportFragmentManager(), sheetFragment.getTag());
+            AppUtils.startActivityLTR(TutorialActivity.this, LoginActivity.class);
+        }
 
+        public void onRegisterPressed(View view) {
+            AppUtils.startActivityLTR(TutorialActivity.this, RegisterActivity.class);
         }
     }
 }

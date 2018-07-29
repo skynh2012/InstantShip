@@ -3,6 +3,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
+    <string name="login">Đăng nhập</string>
+    <string name="register">Đăng ký</string>
+    <string name="password_forget">Quên mật khẩu</string>
+    <string name="have_account">Bạn đã có tài khoản ?</string>
+    <string name="not_have_account">Bạn chưa có tài khoản ?</string>
+    <string name="category_shipper">Shipper</string>
+    <string name="category_find_ship">Tìm shipper</string>
+    <string name="password_hint">Mật khẩu</string>
+    <string name="email_hint">Email</string>
+    <string name="phone_number_hint">Số điện thoại</string>
 </resources>
